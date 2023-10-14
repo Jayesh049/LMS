@@ -17,7 +17,7 @@ const DashboardLayout = ({
             </div>
             {/* to show the contents of children the sidebar width is 56 so we have to add ml-56 */}
             <main
-                className="md:pl-56 py-[80px] h-full">
+                className="md:pl-56 pt-[80px] h-full">
                     {children}
             </main>
         </div>
