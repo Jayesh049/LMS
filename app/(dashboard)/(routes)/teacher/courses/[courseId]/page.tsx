@@ -3,6 +3,7 @@ import { db } from "@/lib/db";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import { LayoutDashboard } from "lucide-react";
+import { TitleForm } from "./_components/title-form";
 
 const CourseIdPage = async ({
     params
@@ -59,6 +60,10 @@ const course = await db.course.findUnique({
                             Customize your course
                         </h2>
                     </div>
+                    <TitleForm 
+                        initialData= {course}
+                        courseId={course.id}
+                    />
                 </div>
             </div>
         </div>
